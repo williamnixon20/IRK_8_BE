@@ -12,7 +12,9 @@ Backend: Bahasa pemrograman GO digunakan sebagai bahasa utama untuk mengembangka
 Frontend: Antarmuka pengguna dibangun menggunakan framework React, yang memberikan pengalaman pengguna yang interaktif dan responsif.
 
 ## Backend: Penjelasan Dynamic Programming
-Dynamic programming adalah teknik pemrograman yang digunakan untuk memecahkan masalah kompleks dengan membaginya menjadi submasalah yang lebih kecil dan lebih mudah dipecahkan. Dalam konteks Course Selector, dynamic programming digunakan untuk mengoptimalkan pemilihan mata kuliah dengan mempertimbangkan berbagai faktor seperti IP, Beban SKS, dan syarat minimum mata kuliah.
+Dynamic programming adalah teknik pemecahan masalah yang sering digunakan dalam ilmu komputer dan matematika untuk menyelesaikan masalah optimasi dan komputasi berulang dengan cara membagi masalah menjadi submasalah yang lebih kecil dan menyimpan solusi submasalah tersebut agar dapat digunakan kembali. Teknik ini biasanya digunakan ketika kita memiliki masalah yang dapat dipecahkan dalam beberapa langkah yang lebih sederhana, dan setiap langkah memiliki solusi yang dapat digunakan untuk memecahkan masalah yang lebih besar.
+
+Dalam konteks Course Selector, dynamic programming digunakan untuk mengoptimalkan pemilihan mata kuliah dengan mempertimbangkan berbagai faktor seperti IP, Beban SKS, dan syarat minimum mata kuliah.
 
 ## Backend: Penjelasan Algoritma
 Program Course Selector menggunakan algoritma 0-1 knapsack untuk mengatasi masalah pemilihan mata kuliah. Algoritma ini bekerja dengan prinsip memilih atau tidak memilih suatu item (mata kuliah) untuk dimasukkan ke dalam "knapsack" (semua mata kuliah yang dapat diambil dalam satu semester) dengan bobot maksimum tertentu (jumlah maksimum SKS yang dapat diambil).
@@ -32,6 +34,7 @@ Langkah-langkah algoritma:
 ## Cara menjalankan aplikasi (docker-compose up -d)
 docker-compose up -d
 
+![Docker](image.png)
 ## Referensi Belajar
 1. Youtube, Programmer Zaman Now, Golang, Youtube
 2. Youtube, Imre Nagi, Docker
