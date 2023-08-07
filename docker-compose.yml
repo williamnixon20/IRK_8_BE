@@ -1,0 +1,29 @@
+version: '3'
+services:
+  app:
+    container_name: app
+    build:
+      context: .
+    ports:
+      - "8080:8080"  # Map the host port 8080 to the container port 8080
+    depends_on:
+      - mysql  # Add a dependency on the mysql service
+    networks:
+      - my-network
+
+  mysql:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: baru
+      MYSQL_DATABASE: baru  # Replace with your desired database name
+    ports:
+      - "3307:3306"  # Map the host port 3306 to the container port 3306
+    volumes:
+      - ./my-script.sql:/docker-entrypoint-initdb.d/my-script.sql:ro
+    networks:
+      - my-network
+
+networks:
+  my-network:
+    name: my-network
+    external: true
